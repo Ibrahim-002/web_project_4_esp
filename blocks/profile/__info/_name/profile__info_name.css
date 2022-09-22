@@ -1,0 +1,13 @@
+.profile__info_name {
+    font-family: 'Inter-Bold';
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 48px;
+    display: flex;
+}
+
+@media screen and (min-width: 320px) and (max-width: 540px) {
+    .profile__info_name {
+        font-size: 3em;
+    }
+}

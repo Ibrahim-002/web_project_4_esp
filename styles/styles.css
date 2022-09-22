@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Inter Bold';
+    src: url(../fonts/Inter-Bold.woff);
+}
+
+@font-face {
+    font-family: 'Inter Regular';
+    src: url(../fonts/Inter-Regular.woff);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.page {
+    width: 880px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    margin-top: 45px;
+}
+
+.header__image {
+    width: 20%;
+    padding-bottom: 41px;
+}
+
+.line {
+    border-bottom: 1px solid #545454;
+    opacity: .7;
+}
+
+.button-edit:hover {
+    opacity: .6;
+}
+
+.footer {
+    color: #545454;
+    margin: 67px 0 60px;
+}
+
+.footer__copyright {
+    font-family: 'Inter-Regular';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/*Aqui inicia*/
+.edit-form {
+    background: white;
+    color: black;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, .15);
+    border-radius: 15px;
+    width: 430px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 25%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .4s;
+}
+
+.open-form {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+}
+/*Aqui termina*/
+
+.edit-form__title {
+    font-family: 'Inter-Bold';
+    font-weight: 900;
+    font-size: 24px;
+    width: 77%;
+    margin: 34px auto 54px;
+}
+
+.edit-form__design {
+    border: 0;
+    width: 84%;
+    height: 27px;
+    margin: 0 auto 30px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    font-size: 14px;
+}
+
+.edit-form__save {
+    width: 358px;
+    height: 50px;
+    font-size: 18px;
+    border: 0;
+    margin: 0 auto 36px;
+    cursor: pointer;
+    transition: opacity .4s;
+    background: black;
+    color: white;
+    font-family: inherit;
+}
+
+.close-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+}
+
+.edit-form__close {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 540px) {
+    .header {
+        width: 25%;
+        margin-top: 28px;
+    }
+
+    .header__image {
+        width: 100%;
+        margin: 28px auto 32px 27px;
+        padding: 0;
+    }
+
+    
+    .footer {
+        width: 88%;
+        margin: 50px auto 36px;
+    }
+
+    .footer__copyright {
+        font-size: 2em;
+    }
+
+    .edit-form {
+        width: 90%;
+        height: 70%;
+        right: 40px;
+        opacity: 0;
+        pointer-events: none;
+        align-items: center;
+    }
+
+    .edit-form__title {
+        font-size: 2em;
+        width: 84%;
+    }
+
+    .open-form {
+        opacity: 1;
+        pointer-events: unset;
+        transition: opacity .4s;
+    }
+
+    .edit-form__design {
+        margin: 22px auto 30px;
+        font-size: 1em;
+    }
+
+    .edit-form__save {
+        width: 84%;
+        margin-top: 46px;
+    }
+}

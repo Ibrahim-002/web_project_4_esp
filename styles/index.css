@@ -1,0 +1,18 @@
+/*bloque elements*/
+@import url(../blocks/elements/elements.css);
+@import url(../blocks/elements/__rectangle/elements__rectangle.css);
+@import url(../blocks/elements/__image/elements__image.css);
+@import url(../blocks/elements/__group/elements__group.css);
+@import url(../blocks/elements/__group/_subtitle/elemetns__group_subtitle.css);
+@import url(../blocks/elements/__group/_vector/elements__group_vector.css);
+
+/*bloque profile*/
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile/__info/profile__info.css);
+@import url(../blocks/profile/__info/_name/profile__info_name.css);
+@import url(../blocks/profile/__info/_profession/profile__info_profession.css);
+@import url(../blocks/profile/__button/profile__button.css);
+@import url(../blocks/profile/__button/_lapiz/profile__button_lapiz.css);
+@import url(../blocks/profile/__add/profile__add.css);
+@import url(../blocks/profile/__add/_symbol/profile__add_symbol.css);
