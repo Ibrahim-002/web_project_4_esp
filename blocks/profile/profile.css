@@ -4,6 +4,7 @@
     color: white;
     display: flex;
     position: relative;
+    z-index: 0;
 }
 
 @media screen and (min-width: 320px) and (max-width: 540px) {

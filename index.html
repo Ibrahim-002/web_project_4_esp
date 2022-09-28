@@ -11,11 +11,23 @@
 </head>
 <body>
 <div class="page">
-    <header class="header">
-        <img src="images/Vector.svg" alt="titulo" class="header__image">
-        <div class="line"></div>
-    </header>
+    <form class="popup">
+        <div class="popup__container">
+            <button class="popup__close button-edit">
+                <img src="images/closeIcon.png" alt="close-icon" class="close-icon">
+            </button>
+            <p class="popup__title">Edit profile</p>    
+            <input type="text" placeholder="Jacques Cousteau" id="named" class="popup__name popup__design">
+            <input type="text" placeholder="Explorador" id="job" class="popup__profession popup__design">
+            <button type="submit" class="popup__save button-edit button-save">Guardar</button>
+        </div>
+    </form>
+    
     <main>
+        <header class="header">
+            <img src="images/Vector.svg" alt="titulo" class="header__image">
+            <div class="line"></div>
+        </header>
         <section class="profile">
             <img src="images/image.jpg" alt="" class="profile__avatar">
             <div class="profile__info">
@@ -29,26 +41,13 @@
             <div class="profile__add button-edit">
                 <img src="images/symbol.png" alt="" class="profile__add_symbol">
             </div>
-
-            
-            <div class="edit-form">
-                <button class="button-edit button-close">
-                    <img src="images/closeIcon.png" alt="close-icon" class="close-icon">
-                </button>
-                <p class="edit-form__title">Edit profile</p>    
-                <input type="text" placeholder="Jacques Cousteau" id="named" class="edit-form__name edit-form__design">
-                <input type="text" placeholder="Explorador" id="profession" class="edit-form__profession edit-form__design">
-                <button class="edit-form__save button-edit button-save">Guardar</button>    
-            </div>
-
-
         </section>
         <section class="elements">
             <div class="elements__rectangle">
                 <img src="images/landscape/landscape_1.jpg" alt="ValleDeYosemite" class="elements__image">                
                 <div class="elements__group">
                     <p class="elements__group_subtitle">Valle de Yosemite</p>
-                    <img src="images/heart.svg" alt="" class="elements__group_vector button-edit">
+                    <button class="elements__group_vector"></button>
                 </div>
             </div>
 
@@ -56,7 +55,7 @@
                 <img src="images/landscape/landscape_2.png" alt="LagoLouise" class="elements__image">
                 <div class="elements__group">
                     <p class="elements__group_subtitle">Lago Louise</p>
-                    <img src="images/heart.svg" alt="" class="elements__group_vector button-edit">
+                    <button class="elements__group_vector"></button>
                 </div>
             </div>
 
@@ -64,7 +63,7 @@
                 <img src="images/landscape/landscape_3.png" alt="MontañasCalvas" class="elements__image">
                 <div class="elements__group">
                     <p class="elements__group_subtitle">Montañas Calvas</p>
-                    <img src="images/heart.svg" alt="" class="elements__group_vector button-edit">
+                    <button class="elements__group_vector"></button>
                 </div>
             </div>
 
@@ -72,7 +71,7 @@
                 <img src="images/landscape/landscape_4.png" alt="Latemar" class="elements__image">
                 <div class="elements__group">
                     <p class="elements__group_subtitle">Latemar</p>
-                    <img src="images/heart.svg" alt="" class="elements__group_vector button-edit">
+                    <button class="elements__group_vector"></button>
                 </div>
             </div>
 
@@ -80,7 +79,7 @@
                 <img src="images/landscape/landscape_5.png" alt="VanoiseNational" class="elements__image">
                 <div class="elements__group">
                     <p class="elements__group_subtitle">Vanoise National</p>
-                    <img src="images/heart.svg" alt="" class="elements__group_vector button-edit">
+                    <button class="elements__group_vector"></button>
                 </div>
             </div>
 
@@ -88,7 +87,7 @@
                 <img src="images/landscape/landscape_6.png" alt="LagoDiBraies" class="elements__image">
                 <div class="elements__group">
                     <p class="elements__group_subtitle">Vanoise National</p>
-                    <img src="images/heart.svg" alt="" class="elements__group_vector button-edit">
+                    <button class="elements__group_vector"></button>
                 </div>
             </div>
         </section>

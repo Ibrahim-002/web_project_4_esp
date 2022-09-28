@@ -1,5 +1,5 @@
 .elements__group_vector {
-    background-image: url(images/heart.svg);
+    background-image: url(/images/heart.svg);
     background-color: white;
     border: none;
     width: 21px;
@@ -7,10 +7,35 @@
     position: absolute;
     right: 5px;
     top: 5px;
+    cursor: pointer;
+}
+
+.elements__group_vector:hover{
+    opacity: .6;
+}
+
+.elements__group_vector-active {
+    background-image: url(/images/Union.svg);
+    background-color: white;
+    border: none;
+    width: 21px;
+    height: 19px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 320px) and (max-width: 540px) {
     .elements__group_vector {
+        width: 41px;
+        height: 39px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    .elements__group_vector-active {
         width: 41px;
         height: 39px;
         position: absolute;
