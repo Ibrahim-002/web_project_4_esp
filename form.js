@@ -20,10 +20,11 @@ popupClose.addEventListener('click', (e)=>{
     popup.classList.remove('popup__opened');
 })
 
-popup.addEventListener('click', (e)=>{
+popup.addEventListener('submit', (e)=>{
     e.preventDefault();
     profileInfoName.textContent = namedInput.value;
     profileInfoProfession.textContent = jobInput.value;
+    popupClose(popup);
 })
 
 let elements = document.querySelector('.elements');
@@ -37,7 +38,7 @@ function activeButton(){
         buttonLike.classList.remove('elements__group_vector-active');
         buttonLike.classList.add('elements__group_vector');
     }
-}
+}       
 
 buttonLike.addEventListener('click', (e)=>{
     e.preventDefault();
