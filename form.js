@@ -24,5 +24,5 @@ popup.addEventListener('submit', (e)=>{
     e.preventDefault();
     profileInfoName.textContent = namedInput.value;
     profileInfoProfession.textContent = jobInput.value;
-    popupClose(popup);
+    popup.classList.remove('popup__opened');
 })
