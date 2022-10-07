@@ -1,182 +1,204 @@
 @font-face {
-    font-family: 'Inter Bold';
-    src: url(../fonts/Inter-Bold.woff2);
+  font-family: 'Inter-Bold';
+  src: url(/fonts/Inter-Bold.woff);
+  src: url(/fonts/Inter-Bold.woff2);
 }
 
 @font-face {
-    font-family: 'Inter Regular';
-    src: url(../fonts/Inter-Regular.woff);
+  font-family: 'Inter-Regular';
+  src: url(/fonts/Inter-Regular.woff);
+  src: url(/fonts/Inter-Regular.woff2);
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: black;
+  background-color: black;
 }
 
 .page {
-    width: 880px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-    position: relative;
+  max-width: 880px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
 }
 
 .header {
-    width: 100%;
-    margin-top: 45px;
+  width: 100%;
+  margin-top: 45px;
 }
 
 .header__image {
-    width: 20%;
-    padding-bottom: 41px;
+  width: 20%;
+  padding-bottom: 41px;
 }
 
 .line {
-    border-bottom: 1px solid #545454;
-    opacity: .7;
+  border-bottom: 1px solid #545454;
+  opacity: .7;
 }
 
 .button-edit:hover {
-    opacity: .6;
+  opacity: .6;
 }
 
 .footer {
-    color: #545454;
-    margin: 67px 0 60px;
+  color: #545454;
+  margin: 67px 0 60px;
 }
 
 .footer__copyright {
-    font-family: 'Inter-Regular';
-    font-weight: 400;
-    font-size: 18px;
+  font-family: 'Inter-Regular';
+  font-weight: 400;
+  font-size: 18px;
 }
 
 /*Aqui inicia*/
 .popup{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .6);
-    display: flex;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity .4s;
-    z-index: 2;
-    pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .4s;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .popup__container {
-    position: sticky;
-    background: white;
-    color: black;
-    border-radius: 15px;
-    width: 430px;
-    height: 330px;
-    display: flex;
-    flex-direction: column;
-    top: 30%;
+  position: sticky;
+  background: white;
+  color: black;
+  border-radius: 15px;
+  width: 430px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  top: 30%;
 }
 
 .popup__opened {
-    opacity: 1;
-    transition: opacity .4s;
-    pointer-events: unset;
+  opacity: 1;
+  transition: opacity .4s;
+  pointer-events: unset;
 }
 /*Aqui termina*/
 
 .popup__title {
-    font-family: 'Inter-Bold';
-    font-weight: 900;
-    font-size: 24px;
-    width: 77%;
-    margin: 34px auto 54px;
+  font-family: 'Inter-Regular';
+  font-weight: bold;
+  font-size: 24px;
+  width: 77%;
+  margin: 34px auto 54px;
 }
 
 .popup__design {
-    border: 0;
-    width: 84%;
-    height: 27px;
-    margin: 0 auto 30px;
-    padding-bottom: 5px;
-    box-sizing: border-box;
-    border-bottom: 1px solid black;
-    font-size: 14px;
+  border: 0;
+  width: 84%;
+  height: 27px;
+  margin: 0 auto 30px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  font-size: 14px;
 }
 
 .popup__save {
-    width: 358px;
-    height: 50px;
-    font-size: 18px;
-    border: 0;
-    margin: 0 auto 36px;
-    cursor: pointer;
-    transition: opacity .4s;
-    background: black;
-    color: white;
-    font-family: inherit;
+  width: 358px;
+  height: 50px;
+  font-size: 18px;
+  border: 0;
+  margin: 0 auto 36px;
+  cursor: pointer;
+  transition: opacity .4s;
+  background: black;
+  color: white;
+  font-family: inherit;
 }
 
 .close-icon {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: -25px;
-    top: -25px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: -25px;
+  top: -25px;
 }
 
 .popup__close {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 320px) and (max-width: 540px) {
-    .header {
-        width: 25%;
-        margin-top: 28px;
-    }
+  .header {
+    max-width: 126px;
+    margin-top: 28px;
+  }
 
-    .header__image {
-        width: 100%;
-        margin: 28px auto 32px 27px;
-        padding: 0;
-    }
-
+  .header__image {
+    width: 100%;
+    margin: 28px auto 32px 27px;
+    padding: 0;
+  }
     
-    .footer {
-        width: 88%;
-        margin: 50px auto 36px;
-    }
+  .footer {
+    width: 88%;
+    margin: 50px auto 36px;
+  }
 
-    .footer__copyright {
-        font-size: 2em;
-    }
+  .footer__copyright {
+    font-size: 14px;
+  }
 
-    .popup {
-        width: 90%;
-        height: 70%;
-        right: 40px;
-        opacity: 0;
-        pointer-events: none;
-        align-items: center;
-    }
+  .popup__container {
+    position: sticky;
+    background: white;
+    color: black;
+    border-radius: 15px;
+    max-width: 282px;
+    display: flex;
+    flex-direction: column;
+    top: 30%;
+  }
 
-    .popup__title {
-        font-size: 2em;
-        width: 84%;
-    }
+  .popup__title {
+    font-size: 18px;
+    width: 84%;
+    margin: 34px auto 54px;
+  }
 
-    .popup__design {
-        margin: 22px auto 30px;
-        font-size: 1em;
-    }
+  .popup__name {
+    margin: 0 auto 20px;
+  }
 
-    .popup__save {
-        width: 84%;
-        margin-top: 46px;
-    }
+  .popup__profession {
+    margin-bottom: 55px;
+  }
+
+  .popup__design {
+    margin: 22px auto 10px;
+    font-size: 1em;
+  }
+
+  .popup__save {
+    width: 238px;
+    height: 46px;
+    font-size: 14px;
+    margin: 30px auto 0;
+  }
+  
+  .close-icon {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    right: -5px;
+    top: -35px;
+  }
 }

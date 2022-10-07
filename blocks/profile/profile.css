@@ -1,20 +1,23 @@
 .profile {
-    width: 100%;
-    margin-top: 40px;
-    color: white;
-    display: flex;
-    position: relative;
-    z-index: 0;
+  width: 100%;
+  margin-top: 40px;
+  color: white;
+  display: flex;
+  position: relative;
+  z-index: 0;
 }
 
+/*Tengo duda en el width si el max-width debe
+ser declarado en pixeles en lugar de porcentaje*/
 @media screen and (min-width: 320px) and (max-width: 540px) {
-    .profile {
-        width: 88%;
-        margin: 42px auto 36px;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-    }
+  .profile {
+    border: 1px solid red;
+    max-width: 88%;
+    margin: 42px auto 36px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
 }

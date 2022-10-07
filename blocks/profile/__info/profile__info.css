@@ -1,16 +1,16 @@
 .profile__info {
-    width: 48%;
-    margin: 22px 0 24px;
-    position: relative;
+  width: 48%;
+  margin: 22px 0 24px;
+  position: relative;
 }
 
 @media screen and (min-width: 320px) and (max-width: 540px) {
-    .profile__info {
-        width: 100%;
-        margin: 26px auto 36px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .profile__info {
+    width: 100%;
+    margin: 26px auto 36px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

@@ -1,14 +1,14 @@
 .profile__info_profession {
-    font-family: 'Inter-Regular';
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21.78px;
-    margin-top: 13px;
+  font-family: 'Inter-Regular';
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21.78px;
+  margin-top: 13px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 540px) {
-    .profile__info_profession {
-        margin-top: 14px;
-        font-size: 2em;
-    }
+  .profile__info_profession {
+    margin-top: 14px;
+    font-size: 1em;
+  }
 }
