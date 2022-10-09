@@ -5,7 +5,7 @@
 }
 
 @font-face {
-  font-family: 'Inter-Regular';
+  font-family: 'Inter';
   src: url(/fonts/Inter-Regular.woff);
   src: url(/fonts/Inter-Regular.woff2);
 }
@@ -54,7 +54,7 @@ body {
 }
 
 .footer__copyright {
-  font-family: 'Inter-Regular';
+  font-family: 'Inter';
   font-weight: 400;
   font-size: 18px;
 }
@@ -93,7 +93,7 @@ body {
 /*Aqui termina*/
 
 .popup__title {
-  font-family: 'Inter-Regular';
+  font-family: 'Inter';
   font-weight: bold;
   font-size: 24px;
   width: 77%;
