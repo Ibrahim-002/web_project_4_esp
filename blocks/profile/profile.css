@@ -7,11 +7,9 @@
   z-index: 0;
 }
 
-/*Tengo duda en el width si el max-width debe
-ser declarado en pixeles en lugar de porcentaje*/
-@media screen and (min-width: 320px) and (max-width: 540px) {
+@media screen and (max-width: 320px) and (max-width: 540px) {
   .profile {
-    max-width: 88%;
+    max-width: 282px;
     margin: 42px auto 36px;
     color: white;
     display: flex;
