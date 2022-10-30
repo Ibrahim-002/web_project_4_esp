@@ -4,9 +4,6 @@
   display: flex;
   padding: 0;
   position: relative;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 @media screen and (min-width: 320px) and (max-width: 540px) {

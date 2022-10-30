@@ -1,16 +1,15 @@
 # Proyecto 4: Alrededor de los Estados Unidos
 
-### Descripción general
+**Descripción general**
 
-* Figma
-* Imágenes
+Esta página permite al usuario mostrar algunas tarjetas con imágenes con sus respectivos nombre de algunos lugares de los E.E.U.U.
+
+Támbien permite al usuario agregar su nombre, así como su profesión en el apartado de perfil.
 
 **Figma**
 
-* [Enlace al proyecto en Figma](https://www.figma.com/file/LDMgqWesKpQkIwhOfEBuTS/WEB%2C-Sprint-5%3A-Around-The-U.S.-%7C-desktop-%2B-mobile?node-id=0%3A1)
+Una de las herramientas utilizadas para el proyecto es Figma el cual es un editor de gráficos vectorial y una herramienta de generación de prototipos, principalmente basada en la web
 
-**Imágenes**
+**Enlace Github**
 
-A la hora de trabajar, debes optar por exportar las imágenes directamente desde Figma; te recomendamos hacerlo para practicar más. No olvides optimizarlas [aquí](https://tinypng.com/), para que tu proyecto cargue más rápido. 
-
-¡Esperamos que te diviertas con JavaScript!
+https://github.com/Ibrahim-002/web_project_4_esp.git

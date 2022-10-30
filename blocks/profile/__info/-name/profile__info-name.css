@@ -1,0 +1,21 @@
+.profile__info-name {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 42px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 30px;
+  margin: 0;
+  text-align: start;
+}
+
+@media screen and (min-width: 320px) and (max-width: 540px) {
+  .profile__info-name {
+    margin: 0;
+    justify-content: center;
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+  }
+}

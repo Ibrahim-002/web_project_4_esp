@@ -1,0 +1,25 @@
+.popup__container {
+  font-family: 'Inter';
+  position: sticky;
+  background: white;
+  color: black;
+  border-radius: 15px;
+  width: 430px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  top: 30%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 540px) {
+  .popup__container {
+    position: sticky;
+    background: white;
+    color: black;
+    border-radius: 15px;
+    max-width: 282px;
+    display: flex;
+    flex-direction: column;
+    top: 30%;
+  }
+}

@@ -1,0 +1,17 @@
+.elements__group-subtitle {
+  width: 246px;
+  font-family: 'Inter';
+  font-weight: bold;
+  font-size: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 10px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 540px) {
+  .elements__group-subtitle {
+    font-size: 1.5em;
+    padding-right: 25px;
+  }
+}
