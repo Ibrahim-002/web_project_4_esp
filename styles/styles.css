@@ -19,17 +19,3 @@
 body {
   background-color: black;
 }
-
-.page {
-  max-width: 880px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: auto;
-  position: relative;
-}
-
-
-.button-edit:hover {
-  opacity: .6;
-}

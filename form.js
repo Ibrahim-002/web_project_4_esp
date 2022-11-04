@@ -10,13 +10,11 @@ const profileInfoName = document.querySelector('.profile__info-name');
 const profileInfoProfession = document.querySelector('.profile__info-profession');
 
 
-profileButton.addEventListener('click', (e)=>{
-  e.preventDefault();
+profileButton.addEventListener('click', ()=>{  
   popup.classList.add('popup__opened');
 })
 
-popupClose.addEventListener('click', (e)=>{
-  e.preventDefault();
+popupClose.addEventListener('click', ()=>{  
   popup.classList.remove('popup__opened');
 })
 
