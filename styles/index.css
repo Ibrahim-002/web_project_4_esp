@@ -1,6 +1,6 @@
 @import url(normalize.css);
-@import url(../blocks/page.css);
-@import url(../blocks/button-edit.css);
+@import url(../blocks/page/page.css);
+@import url(../blocks/button-edit/button-edit.css);
 
 /*header*/
 @import url(../blocks/header/header.css);
@@ -36,7 +36,6 @@
 @import url(../blocks/popup/__profession/popup__profession.css);
 @import url(../blocks/popup/__close/popup__close.css);
 @import url(../blocks/popup/close-icon/close-icon.css);
-
 
 /*footer*/
 @import url(../blocks/footer/footer.css);
