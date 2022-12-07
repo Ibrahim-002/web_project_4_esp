@@ -14,6 +14,7 @@
 @import url(../blocks/elements/__group/elements__group.css);
 @import url(../blocks/elements/__group/-subtitle/elements__group-subtitle.css);
 @import url(../blocks/elements/__group/-vector/elements__group-vector.css);
+@import url(../blocks/elements/__trash/elements__trash.css);
 
 /*bloque profile*/
 @import url(../blocks/profile/profile.css);
@@ -36,6 +37,10 @@
 @import url(../blocks/popup/__profession/popup__profession.css);
 @import url(../blocks/popup/__close/popup__close.css);
 @import url(../blocks/popup/close-icon/close-icon.css);
+
+/*popupCards*/
+/*@import url(../blocks/popup/popupCards.css);*/
+@import url(../blocks/macro.css);
 
 /*footer*/
 @import url(../blocks/footer/footer.css);

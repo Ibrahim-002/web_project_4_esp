@@ -11,12 +11,12 @@
   </head>
   <body>
     <div class="page">
-      <form class="popup">
-        <div class="popup__container">
+      <div class="popup popup_new-card">
+        <form class="popup__container">
           <button class="popup__close button-edit">
             <img
               src="images/closeIcon.png"
-              alt="close-icon"
+              alt=""
               class="close-icon"
             />
           </button>
@@ -36,8 +36,46 @@
           <button type="submit" class="popup__save button-edit button-save">
             Guardar
           </button>
+        </form>
+      </div>
+
+      <div class="macro">
+        <div class="macro__content">
+          <img 
+            src="" 
+            alt=""
+          />
+          <button class="macro__close"></button>
         </div>
-      </form>
+      </div>
+
+      <!--form class="popupCards">
+        <div class="popupCards__container">
+          <button class="popupCards__close button-edit">
+            <img
+              src="images/closeIcon.png"
+              alt="close-icon"
+              class="close-icon"
+            />
+          </button>
+          <p class="popupCards__title">Nuevo Lugar</p>
+          <input
+            type="text"
+            placeholder="Titulo"
+            id="namedCards"
+            class="popupCards__name popup__design"
+          />
+          <input
+            type="text"
+            placeholder="Enlace a la imagen"
+            id="imageCards"
+            class="popupCards__profession popup__design"
+          />
+          <button type="submit" class="popupCards__save button-edit button-save">
+            Crear
+          </button>
+        </div>
+      </form-->
 
       <main>
         <header class="header">
@@ -55,92 +93,41 @@
                 class="profile__button-lapiz"
               />
             </button>
-            <h1 class="profile__info-name">Jacques Cousteau</h1>            
-            <h2 class="profile__info-profession">Explorador</h2>            
+            <h1 class="profile__info-name modal-title">Jacques Cousteau</h1>            
+            <h2 class="profile__info-profession modal-subtitle">Explorador</h2>            
           </div>
           
           <div class="profile__add button-edit">
             <img src="images/symbol.png" alt="" class="profile__add-symbol" />
           </div>
         </section>
-        <div class="elements">
-          <div class="elements__rectangle">
-            <img
-              src="images/landscape/landscape_1.jpg"
-              alt="ValleDeYosemite"
-              class="elements__image"
-            />
-            <div class="elements__group">
-              <p class="elements__group-subtitle">Valle de Yosemite</p>
-              <button class="elements__group-vector"></button>
-            </div>
-          </div>
 
-          <div class="elements__rectangle">
-            <img
-              src="images/landscape/landscape_2.png"
-              alt="LagoLouise"
-              class="elements__image"
-            />
-            <div class="elements__group">
-              <p class="elements__group-subtitle">Lago Louise</p>
-              <button class="elements__group-vector"></button>
-            </div>
-          </div>
-
-          <div class="elements__rectangle">
-            <img
-              src="images/landscape/landscape_3.png"
-              alt="MontañasCalvas"
-              class="elements__image"
-            />
-            <div class="elements__group">
-              <p class="elements__group-subtitle">Montañas Calvas</p>
-              <button class="elements__group-vector"></button>
-            </div>
-          </div>
-
-          <div class="elements__rectangle">
-            <img
-              src="images/landscape/landscape_4.png"
-              alt="Latemar"
-              class="elements__image"
-            />
-            <div class="elements__group">
-              <p class="elements__group-subtitle">Latemar</p>
-              <button class="elements__group-vector"></button>
-            </div>
-          </div>
-
-          <div class="elements__rectangle">
-            <img
-              src="images/landscape/landscape_5.png"
-              alt="VanoiseNational"
-              class="elements__image"
-            />
-            <div class="elements__group">
-              <p class="elements__group-subtitle">Vanoise National</p>
-              <button class="elements__group-vector"></button>
-            </div>
-          </div>
-
-          <div class="elements__rectangle">
-            <img
-              src="images/landscape/landscape_6.png"
-              alt="LagoDiBraies"
-              class="elements__image"
-            />
-            <div class="elements__group">
-              <p class="elements__group-subtitle">Vanoise National</p>
-              <button class="elements__group-vector"></button>
-            </div>
-          </div>
+        <!--Aqui se almacenan las cards-->
+        <div class="elements">          
         </div>
+
       </main>
       <footer class="footer">
         <p class="footer__copyright">© 2021 Alrededor de los EEUU</p>
       </footer>
     </div>
-    <script src="form.js"></script>
+
+    <template class="template__card">    
+      <div class="elements__rectangle">
+        <img src="images/Trash.svg" class="elements__trash">
+        <img
+        src=""
+        alt=""
+        class="elements__image modal-title"
+        />  
+        <div class="elements__group">
+          <p class="elements__group-subtitle modal-subtitle">Valle de Yosemite</p>
+          <button class="elements__group-vector"></button>
+        </div>      
+      </div>  
+  </template>
+
+    <script src="index.js"></script>
+
   </body>
 </html>

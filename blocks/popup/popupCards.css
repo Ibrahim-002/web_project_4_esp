@@ -1,0 +1,106 @@
+/*.popupCards{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .4s;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.popupCards__opened {
+  opacity: 1;
+  transition: opacity .4s;
+  pointer-events: unset;
+}
+
+.popupCards__close {
+  cursor: pointer;
+}
+
+.popupCards__container {
+  font-family: 'Inter';
+  position: sticky;
+  background: white;
+  color: black;
+  border-radius: 15px;
+  width: 430px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  top: 30%;
+}
+
+.popupCards__design {
+  border: 0;
+  width: 84%;
+  height: 27px;
+  margin: 0 auto 30px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+}
+
+.popupCards__save {
+  width: 358px;
+  height: 50px;
+  font-size: 18px;
+  border: 0;
+  margin: 0 auto 36px;
+  cursor: pointer;
+  transition: opacity .4s;
+  background: black;
+  color: white;
+  font-family: inherit;
+}
+
+.popupCards__title {
+  font-family: 'Inter';
+  font-weight: bold;
+  font-size: 24px;
+  width: 77%;
+  margin: 34px auto 54px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 540px) {
+  .popupCards__container {
+    position: sticky;
+    background: white;
+    color: black;
+    border-radius: 15px;
+    max-width: 282px;
+    display: flex;
+    flex-direction: column;
+    top: 30%;
+  }
+
+  .popupCards__design {
+    margin: 22px auto 10px;
+  }
+
+  .popupCards__name {
+    margin: 0 auto 20px;
+  }
+
+  .popupCards__profession {
+    margin-bottom: 16px;
+  }
+
+  .popupCards__save {
+    width: 238px;
+    height: 46px;
+    font-size: 14px;
+    margin: 30px auto 25px;
+  }
+
+  .popupCards__title {
+    font-size: 18px;
+    width: 84%;
+    margin: 34px auto 54px;
+  }
+}
+*/
