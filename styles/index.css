@@ -38,9 +38,11 @@
 @import url(../blocks/popup/__close/popup__close.css);
 @import url(../blocks/popup/close-icon/close-icon.css);
 
-/*popupCards*/
-/*@import url(../blocks/popup/popupCards.css);*/
-@import url(../blocks/macro.css);
+/*Contenedor de imágenes*/
+@import url(../blocks/macro/macro.css);
+@import url(../blocks/macro/__content/macro__content.css);
+@import url(../blocks/macro/active.css);
+@import url(../blocks/macro/__close/macro__close.css);
 
 /*footer*/
 @import url(../blocks/footer/footer.css);

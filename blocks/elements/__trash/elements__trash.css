@@ -6,4 +6,8 @@
   right: 15px;
   z-index: 1;
   cursor: pointer;
+  background-image: url(/images/Trash.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
 }

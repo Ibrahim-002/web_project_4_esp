@@ -1,6 +1,8 @@
 .elements__rectangle {
   width: calc(880px / 3 - (20px));
+  height: 382px;
   background: white;
   border-radius: 10px;
   position: relative;
+  margin-top: 10px;
 }

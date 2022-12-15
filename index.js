@@ -1,10 +1,12 @@
-//Popup de editor de perfil
+
+/*-----Popup de editor de perfil-----*/
+
 const profileButton = document.querySelector('.profile__button');
 const popup = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
 
-const namedInput = document.querySelector('#named');
-const jobInput = document.querySelector('#job');
+const fieldAInput = document.querySelector('#fieldA');
+const fieldBInput = document.querySelector('#fieldB');
 
 const modalTitle = document.querySelector('.modal-title');
 const modalSubtitle = document.querySelector('.modal-subtitle');
@@ -21,83 +23,98 @@ function openPopup () {
   
   popup.addEventListener('submit', (e)=>{
     e.preventDefault();
-    modalTitle.textContent = namedInput.value;
-    modalSubtitle.textContent = jobInput.value;  
+    modalTitle.textContent = fieldAInput.value;
+    modalSubtitle.textContent = fieldBInput.value;  
     popup.classList.remove('popup__opened');
   })
 }
-
 openPopup();
 
-/*Boton agregar cards
+/*-----Popup agregar cards-----*/
 
 const profileAdd = document.querySelector('.profile__add');
-const popupCards = document.querySelector('.popupCards');
-const popupCardsClose = document.querySelector('.popupCards__close');
-const elements = document.querySelector('.elements');
+const popupCards = document.querySelector('.popup-cards');
 
-const namedCardsInput = document.querySelector('#namedCards');
-const imageCardsInput = document.querySelector('#imageCards');
+const popupContainer = document.querySelector('.popup__container');
 
-profileAdd.addEventListener('click', ()=> {
-  popupCards.classList.add('popupCards__opened')
 
+function openPopupCards () {
+  profileAdd.addEventListener('click', ()=>{  
+    popupCards.classList.add('popup__opened');
+  })
+  
   popupClose.addEventListener('click', ()=>{  
-    popupCards.classList.remove('popupCards__opened');
+    popupCards.classList.remove('popup__opened');
   })
 
-  popupCards.addEventListener('subnit', (e)=> {
-    modalTitle.textContent = namedCardsInput.value;
-    modalSubtitle.textContent = imageCardsInput.value;
-    popupCards.classList.remove('popupCards__opened');
-  })
-});*/
+  popupCards.addEventListener('submit', (evt)=>{
+    
+    evt.preventDefault();
 
-const profileAdd = document.querySelector('.profile__add');
-const elementsContainer = document.querySelector('.elements');
-const popupNewCard = document.querySelector('.popup_new-card');
+    const modalText = document.querySelector('.modal-text').value;
+    const modalUrl = document.querySelector('.modal-url').value;
+  
+    const newCard = templateCard.cloneNode(true);
+  
+    newCard.querySelector('.elements__image').src = modalUrl;
+    newCard.querySelector('.elements__group-subtitle').textContent = modalText;
+  
+    elementsBox.prepend(newCard);
+    
+    popupCards.classList.remove('popup__opened');
+    document.querySelector('.modal-text').value = '';
+    document.querySelector('.modal-url').value = '';
+  });
+};
+
+openPopupCards();
+
+//Section elements y ampliar imagenes
+
+const elementsBox = document.querySelector('.elements');
 const macroContent = document.querySelector('.macro__content');
 const macroImage = document.querySelector('.macro__image');
-const templateCard = document.querySelector('.template__card').content.querySelector('.elements__rectangle');
-//const elementsRectangle = document.querySelector('.elements__rectangle').content.querySelector('.card');
+const templateCard = document.querySelector('.template-card').content.querySelector('.elements__rectangle');
 
+//Lugar para inicializar los cambios del ussuario
 const initialCards = [
   {
-    name: "Valle de Yosemite",
+    subtitle: "Valle de Yosemite",
     link: "https://code.s3.yandex.net/web-code/yosemite.jpg"
   },
   {
-    name: "Lago Louise",
+    subtitle: "Lago Louise",
     link: "https://code.s3.yandex.net/web-code/lake-louise.jpg"
   },
   {
-    name: "Montañas Calvas",
+    subtitle: "Montañas Calvas",
     link: "https://code.s3.yandex.net/web-code/bald-mountains.jpg"
   },
   {
-    name: "Latemar",
+    subtitle: "Latemar",
     link: "https://code.s3.yandex.net/web-code/latemar.jpg"
   },
   {
-    name: "Parque Nacional de la Vanoise",
+    subtitle: "Parque Nacional de la Vanoise",
     link: "https://code.s3.yandex.net/web-code/vanoise.jpg"
   },
   {
-    name: "Lago di Braies",
+    subtitle: "Lago di Braies",
     link: "https://code.s3.yandex.net/web-code/lago.jpg"
   }
 ];
 
 initialCards.forEach(function (e) {
   //generar la tarjeta
+  
   const newCard = templateCard.cloneNode(true);
 
   //llenar la informacion de la tarjeta
   newCard.querySelector('.elements__image').src = e.link;
-  newCard.querySelector('.elements__group-subtitle').textContent = e.name;
+  newCard.querySelector('.elements__group-subtitle').textContent = e.subtitle;
 
   //agregar a la caja
-  elementsContainer.prepend(newCard);
+  elementsBox.prepend(newCard);
 });
 
 const handleClick = function (event) {
@@ -105,26 +122,29 @@ const handleClick = function (event) {
   if (event.target.tagName === 'IMG') {
     console.log('clic a la imagen');
 
-    macroContent.querySelector('.macro__content img').src = event.target.src;    
+    macroContent.querySelector('.macro__content img').src = event.target.src;
     macroContent.classList.add('active');
   }
-};
-
-elementsContainer.addEventListener('click', handleClick);
-
-const macroClose = document.querySelector('.macro__close');
-
-
-/*const handleKeyPress = function (event) {
-  if(event.key === '-') {     
-    macroContent.classList.remove('active');
+  if (event.target.tagName === 'BUTTON') {    
+    event.target.parentNode.remove();
   }
 };
 
-document.addEventListener('keypress', handleKeyPress);*/
+elementsBox.addEventListener('click', handleClick);
 
-/*document.querySelectorAll('.elements').forEach(el => {
-  el.addEventListener('click', function (ev) {
-    this.classList.remove('active');
-  })
-});*/
+const macroClose = document.querySelector('.macro__close');
+  macroClose.addEventListener('click', ()=>{  
+  macroContent.classList.remove('active');
+  macroContent.querySelector('.macro__content img').src = '';
+});
+
+
+/*Botón de like*/
+
+const heartLike = document.querySelectorAll('.elements__group-vector');
+
+heartLike.forEach(function(like){
+  like.addEventListener('click', function(){
+    like.classList.add('active-vector');    
+  });
+});

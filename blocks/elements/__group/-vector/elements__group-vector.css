@@ -6,7 +6,7 @@
   width: 21px;
   height: 19px;
   position: absolute;
-  right: 5px;
+  right: 1px;
   top: 5px;
   cursor: pointer;
 }
@@ -15,7 +15,7 @@
   opacity: .6;
 }
 
-.elements__group-vector:active {
+.active-vector {
   background-image: url(/images/Union.svg);
   background-color: white;
   background-repeat: no-repeat;
@@ -23,7 +23,7 @@
   width: 21px;
   height: 19px;
   position: absolute;
-  right: 5px;
+  right: 1px;
   top: 5px;
   cursor: pointer;
   opacity: 1;

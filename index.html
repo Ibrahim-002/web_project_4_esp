@@ -11,7 +11,10 @@
   </head>
   <body>
     <div class="page">
-      <div class="popup popup_new-card">
+
+
+      <!--Contenido del popup de Perfil-->
+      <div class="popup">
         <form class="popup__container">
           <button class="popup__close button-edit">
             <img
@@ -24,58 +27,61 @@
           <input
             type="text"
             placeholder="Jacques Cousteau"
-            id="named"
+            id="fieldA"
             class="popup__name popup__design"
           />
           <input
             type="text"
             placeholder="Explorador"
-            id="job"
+            id="fieldB"
             class="popup__profession popup__design"
           />
-          <button type="submit" class="popup__save button-edit button-save">
+          <button type="submit" class="popup__save button-edit">
             Guardar
           </button>
         </form>
       </div>
 
+
+      <!--Contenido del popup de las cards-->
+      <div class="popup-cards">
+        <form class="popup__container">
+          <button class="popup__close button-edit">
+            <img
+              src="images/closeIcon.png"
+              alt=""
+              class="close-icon"
+            />
+          </button>
+          <p class="popup__title">Nuevo lugar</p>
+          <input
+            type="text"
+            placeholder="Título"
+            id="fieldC"
+            class="modal-text popup__design"
+          />
+          <input
+            type="text"
+            placeholder="Enlace de la imagen"
+            id="fieldD"
+            class="modal-url popup__design"
+          />
+          <button type="submit" class="popup__save button-edit">
+            Crear
+          </button>
+        </form>
+      </div>
+
+      
       <div class="macro">
         <div class="macro__content">
           <img 
             src="" 
             alt=""
-          />
-          <button class="macro__close"></button>
-        </div>
+          />  
+          <span class="macro__close"></span>
+        </div>        
       </div>
-
-      <!--form class="popupCards">
-        <div class="popupCards__container">
-          <button class="popupCards__close button-edit">
-            <img
-              src="images/closeIcon.png"
-              alt="close-icon"
-              class="close-icon"
-            />
-          </button>
-          <p class="popupCards__title">Nuevo Lugar</p>
-          <input
-            type="text"
-            placeholder="Titulo"
-            id="namedCards"
-            class="popupCards__name popup__design"
-          />
-          <input
-            type="text"
-            placeholder="Enlace a la imagen"
-            id="imageCards"
-            class="popupCards__profession popup__design"
-          />
-          <button type="submit" class="popupCards__save button-edit button-save">
-            Crear
-          </button>
-        </div>
-      </form-->
 
       <main>
         <header class="header">
@@ -112,17 +118,17 @@
       </footer>
     </div>
 
-    <template class="template__card">    
+        <template class="template-card">    
       <div class="elements__rectangle">
-        <img src="images/Trash.svg" class="elements__trash">
+        <button class="elements__trash"></button>
         <img
         src=""
         alt=""
-        class="elements__image modal-title"
+        class="elements__image "
         />  
         <div class="elements__group">
-          <p class="elements__group-subtitle modal-subtitle">Valle de Yosemite</p>
-          <button class="elements__group-vector"></button>
+          <p class="elements__group-subtitle "></p>
+          <span class="elements__group-vector"></span>
         </div>      
       </div>  
   </template>
