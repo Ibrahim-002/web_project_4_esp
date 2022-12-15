@@ -1,6 +1,6 @@
 .macro__close {
   background-image: url(/images/closeIcon.png);
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
   background-position: 50%;
   width: 30px;
   height: 30px;
@@ -11,7 +11,7 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 540px){
-  .macro__close {    
+  .macro__close {
     right: 20px;
     top: 90px;
   }
