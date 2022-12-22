@@ -2,12 +2,9 @@
   position: absolute;
   width: 18px;
   height: 19.3px;
-  top: 18px;
+  top: 8px;
   right: 15px;
-  z-index: 1;
-  cursor: pointer;
-  background-image: url(/images/Trash.svg);
-  background-repeat: no-repeat;
-  background-color: transparent;
+  cursor: pointer;  
   border: none;
+  z-index: 2;
 }

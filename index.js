@@ -19,15 +19,16 @@ function openPopup () {
   
   popupClose.addEventListener('click', ()=>{  
     popup.classList.remove('popup__opened');
-  })
-  
-  popup.addEventListener('submit', (e)=>{
+  })  
+}
+
+popup.addEventListener('submit', (e)=>{
     e.preventDefault();
     modalTitle.textContent = fieldAInput.value;
     modalSubtitle.textContent = fieldBInput.value;  
     popup.classList.remove('popup__opened');
   })
-}
+
 openPopup();
 
 /*-----Popup agregar cards-----*/
@@ -119,13 +120,11 @@ initialCards.forEach(function (e) {
 
 const handleClick = function (event) {
   
-  if (event.target.tagName === 'IMG') {
-    console.log('clic a la imagen');
-
+  if (event.target.classList.contains('elements__image')) {
     macroContent.querySelector('.macro__content img').src = event.target.src;
     macroContent.classList.add('active');
   }
-  if (event.target.tagName === 'BUTTON') {    
+  if (event.target.classList.contains('elements__trash')) {
     event.target.parentNode.remove();
   }
 };
