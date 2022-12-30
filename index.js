@@ -12,63 +12,28 @@ const modalTitle = document.querySelector('.modal-title');
 const modalSubtitle = document.querySelector('.modal-subtitle');
 
 
+document.getElementById('fieldA').value = 'Jacques Cousteau';
+
 function openPopup () {
   profileButton.addEventListener('click', ()=>{  
     popup.classList.add('popup__opened');
   })
   
-  popupClose.addEventListener('click', ()=>{  
+  popupClose.addEventListener('click', (a)=>{
+    a.preventDefault();
     popup.classList.remove('popup__opened');
   })  
 }
 
 popup.addEventListener('submit', (e)=>{
     e.preventDefault();
+
     modalTitle.textContent = fieldAInput.value;
     modalSubtitle.textContent = fieldBInput.value;  
-    popup.classList.remove('popup__opened');
+    popup.classList.remove('popup__opened');    
   })
 
 openPopup();
-
-/*-----Popup agregar cards-----*/
-
-const profileAdd = document.querySelector('.profile__add');
-const popupCards = document.querySelector('.popup-cards');
-
-const popupContainer = document.querySelector('.popup__container');
-
-
-function openPopupCards () {
-  profileAdd.addEventListener('click', ()=>{  
-    popupCards.classList.add('popup__opened');
-  })
-  
-  popupClose.addEventListener('click', ()=>{  
-    popupCards.classList.remove('popup__opened');
-  })
-
-  popupCards.addEventListener('submit', (evt)=>{
-    
-    evt.preventDefault();
-
-    const modalText = document.querySelector('.modal-text').value;
-    const modalUrl = document.querySelector('.modal-url').value;
-  
-    const newCard = templateCard.cloneNode(true);
-  
-    newCard.querySelector('.elements__image').src = modalUrl;
-    newCard.querySelector('.elements__group-subtitle').textContent = modalText;
-  
-    elementsBox.prepend(newCard);
-    
-    popupCards.classList.remove('popup__opened');
-    document.querySelector('.modal-text').value = '';
-    document.querySelector('.modal-url').value = '';
-  });
-};
-
-openPopupCards();
 
 //Section elements y ampliar imagenes
 
@@ -76,6 +41,7 @@ const elementsBox = document.querySelector('.elements');
 const macroContent = document.querySelector('.macro__content');
 const macroImage = document.querySelector('.macro__image');
 const templateCard = document.querySelector('.template-card').content.querySelector('.elements__rectangle');
+
 
 //Lugar para inicializar los cambios del ussuario
 const initialCards = [
@@ -105,10 +71,10 @@ const initialCards = [
   }
 ];
 
-initialCards.forEach(function (e) {
+const allCards = initialCards.forEach(function (e) {
   //generar la tarjeta
   
-  const newCard = templateCard.cloneNode(true);
+  let newCard = templateCard.cloneNode(true);
 
   //llenar la informacion de la tarjeta
   newCard.querySelector('.elements__image').src = e.link;
@@ -137,12 +103,44 @@ const macroClose = document.querySelector('.macro__close');
   macroContent.querySelector('.macro__content img').src = '';
 });
 
+//Abrir el poopup de Cards
+
+const profileAdd = document.querySelector('.profile__add');
+const popupCloseCards = document.querySelector('.popup__close-cards');
+const popupCards = document.querySelector('.popup-cards');
+
+
+
+profileAdd.addEventListener('click', ()=>{
+  popupCards.classList.add('popup__opened');
+});
+
+popupCloseCards.addEventListener('click', (ev)=>{
+  ev.preventDefault();
+  popupCards.classList.remove('popup__opened');
+}) 
+
+popupCards.addEventListener('submit', (ev)=> {
+  ev.preventDefault();
+
+  const modalText = document.querySelector('.modal-text').value;
+  const modalUrl = document.querySelector('.modal-url').value;
+  let addCards = templateCard.cloneNode(true);
+
+  addCards.querySelector('.elements__image').src = modalUrl;
+  addCards.querySelector('.elements__group-subtitle').textContent = modalText;   
+
+  elementsBox.prepend(addCards);
+  document.querySelector('.modal-text').value = '';
+  document.querySelector('.modal-url').value = '';
+  popupCards.classList.remove('popup__opened');
+});
 
 /*Botón de like*/
 
 const heartLike = document.querySelectorAll('.elements__group-vector');
 
-heartLike.forEach(function(like){
+heartLike.forEach(like => {
   like.addEventListener('click', function(){
     like.classList.add('active-vector');    
   });
