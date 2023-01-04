@@ -13,6 +13,7 @@ const modalSubtitle = document.querySelector('.modal-subtitle');
 
 
 document.getElementById('fieldA').value = 'Jacques Cousteau';
+document.getElementById('fieldB').value = 'Explorador';
 
 function openPopup () {
   profileButton.addEventListener('click', ()=>{  
@@ -71,19 +72,23 @@ const initialCards = [
   }
 ];
 
-const allCards = initialCards.forEach(function (e) {
-  //generar la tarjeta
-  
-  let newCard = templateCard.cloneNode(true);
 
+
+initialCards.forEach(function (e) {
+  //generar la tarjeta  
+  let newCard = templateCard.cloneNode(true); 
+  
   //llenar la informacion de la tarjeta
   newCard.querySelector('.elements__image').src = e.link;
   newCard.querySelector('.elements__group-subtitle').textContent = e.subtitle;
 
   //agregar a la caja
   elementsBox.prepend(newCard);
+
+  
 });
 
+//Funcion para ampliar las imagenes
 const handleClick = function (event) {
   
   if (event.target.classList.contains('elements__image')) {
@@ -98,18 +103,19 @@ const handleClick = function (event) {
 elementsBox.addEventListener('click', handleClick);
 
 const macroClose = document.querySelector('.macro__close');
-  macroClose.addEventListener('click', ()=>{  
+
+macroClose.addEventListener('click', ()=>{  
   macroContent.classList.remove('active');
   macroContent.querySelector('.macro__content img').src = '';
 });
+
+
 
 //Abrir el poopup de Cards
 
 const profileAdd = document.querySelector('.profile__add');
 const popupCloseCards = document.querySelector('.popup__close-cards');
 const popupCards = document.querySelector('.popup-cards');
-
-
 
 profileAdd.addEventListener('click', ()=>{
   popupCards.classList.add('popup__opened');
@@ -134,14 +140,21 @@ popupCards.addEventListener('submit', (ev)=> {
   document.querySelector('.modal-text').value = '';
   document.querySelector('.modal-url').value = '';
   popupCards.classList.remove('popup__opened');
+
+  addHeart();
 });
 
 /*Botón de like*/
 
-const heartLike = document.querySelectorAll('.elements__group-vector');
+function addHeart () {
 
-heartLike.forEach(like => {
-  like.addEventListener('click', function(){
-    like.classList.add('active-vector');    
-  });
+  const heartLike = document.querySelectorAll('.elements__group-vector');
+
+  heartLike.forEach(like => {
+    like.addEventListener('click', function(){
+      like.classList.add('active-vector');    
+    });
 });
+}
+
+addHeart();
